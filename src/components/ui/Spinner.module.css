@@ -1,0 +1,14 @@
+/* src/components/ui/Spinner.module.css */
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.ring {
+  border: 2.5px solid var(--border);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

@@ -1,0 +1,35 @@
+/* src/components/ui/QuantityStepper.module.css */
+.stepper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.btn {
+  background: transparent;
+  color: var(--purple-light);
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.btn:hover { background: var(--purple-dim); }
+.btn:active { background: rgba(124,111,233,0.25); }
+.qty {
+  min-width: 28px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0 4px;
+}

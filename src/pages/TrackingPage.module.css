@@ -1,0 +1,104 @@
+/* src/pages/TrackingPage.module.css */
+.page { min-height: 100vh; padding-bottom: 60px; }
+.inner { max-width: 680px; margin: 0 auto; padding: 24px 16px; }
+
+.back {
+  background: none; border: none; color: var(--text-muted); font-size: 14px;
+  cursor: pointer; padding: 0; margin-bottom: 20px;
+  display: inline-flex; align-items: center; gap: 6px; transition: color var(--transition);
+}
+.back:hover { color: var(--purple-light); }
+
+.title {
+  font-family: var(--font-display); font-size: 28px; font-weight: 800;
+  letter-spacing: -0.02em; color: var(--text); margin-bottom: 24px;
+}
+
+.searchBar { display: flex; gap: 10px; margin-bottom: 24px; }
+.refInput { flex: 1; font-family: var(--font-display); font-weight: 700; letter-spacing: 0.05em; }
+
+.error {
+  background: var(--red-dim); border: 1px solid rgba(248,113,113,0.3);
+  border-radius: var(--radius-sm); padding: 12px 16px;
+  font-size: 14px; color: var(--red); margin-bottom: 20px;
+}
+
+.trackContent { display: flex; flex-direction: column; gap: 16px; animation: fadeIn 0.4s ease; }
+
+.orderHeader {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  background: var(--glass); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px;
+}
+.refLabel { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.refValue { font-family: var(--font-display); font-size: 20px; font-weight: 800; color: var(--text); }
+
+.payLink { text-decoration: none; display: block; }
+
+/* Timeline card */
+.timelineCard {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 24px;
+}
+.cardTitle {
+  font-family: var(--font-display); font-size: 16px; font-weight: 700;
+  color: var(--text); margin-bottom: 20px; letter-spacing: -0.01em;
+}
+
+.timeline { display: flex; flex-direction: column; }
+
+.step { display: flex; gap: 16px; }
+.stepLeft { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 36px; }
+.dot {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--bg3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; flex-shrink: 0;
+  transition: all var(--transition);
+}
+.done .dot { border-color: var(--purple); background: var(--purple-dim); }
+.current .dot { border-color: var(--purple); background: var(--purple); box-shadow: 0 0 0 4px var(--purple-dim); }
+.dotInner { width: 10px; height: 10px; border-radius: 50%; background: var(--border); }
+
+.line { width: 2px; flex: 1; min-height: 20px; background: var(--border); margin: 4px 0; transition: background var(--transition); }
+.lineDone { background: var(--purple); }
+
+.stepContent { padding-bottom: 20px; flex: 1; }
+.step:last-child .stepContent { padding-bottom: 0; }
+.stepLabel { font-size: 14px; font-weight: 600; color: var(--text-muted); line-height: 1; margin-bottom: 4px; margin-top: 6px; }
+.done .stepLabel { color: var(--text); }
+.current .stepLabel { color: var(--purple-light); font-weight: 700; }
+.stepDesc { font-size: 12px; color: var(--text-faint); line-height: 1.4; }
+.done .stepDesc { color: var(--text-muted); }
+.stepTime { font-size: 11px; color: var(--purple-light); margin-top: 4px; font-weight: 500; }
+
+/* Shipping card */
+.shippingCard {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+}
+.shippingRows { display: flex; flex-direction: column; gap: 10px; }
+.shippingRow { display: flex; justify-content: space-between; font-size: 14px; color: var(--text-muted); }
+.shippingRow span:last-child { color: var(--text); font-weight: 500; }
+.trackId { font-family: monospace; color: var(--purple-light) !important; letter-spacing: 0.05em; }
+
+/* Items card */
+.itemsCard {
+  background: var(--glass); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 20px;
+}
+.orderItems { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.orderItem { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.oiName { flex: 1; color: var(--text-muted); }
+.oiQty { color: var(--text-faint); }
+.oiPrice { font-weight: 600; color: var(--text); }
+.totalLine {
+  display: flex; justify-content: space-between; padding-top: 12px;
+  border-top: 1px solid var(--border); font-weight: 600; font-size: 16px; color: var(--text);
+}
+.totalAmt { font-family: var(--font-display); font-size: 20px; font-weight: 800; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,36 @@
+/* src/components/CategoryPills.module.css */
+.wrap {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+.wrap::-webkit-scrollbar { display: none; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+.pill:hover {
+  border-color: var(--border-hover);
+  color: var(--text);
+}
+.active {
+  background: var(--purple-dim);
+  border-color: var(--purple);
+  color: var(--purple-light);
+  box-shadow: 0 2px 12px var(--purple-dim);
+}
